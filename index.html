@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+					margin: 0px;
+					padding: 0px;
+				}
+			.main{
+				height: 15rem;width: 15rem;
+				transform: rotate(45deg);
+				position: relative;
+				top: 13rem;
+				overflow: hidden;
+				display: block;
+				margin-left: 30rem;
+				float: left;
+			}
+			.disc1{
+				position: absolute;
+				left: 5rem;
+				top: 0;
+				background-color: red;
+				height: 10rem;width: 10rem;
+				border-radius: 100%;
+			}
+			.disc2{
+				position: absolute;
+				left: 0;
+				top: 5rem;
+				background-color: red;
+				height: 10rem;width: 10rem;
+				border-radius: 100%;
+			}
+			.square{
+				position: absolute;
+				left: 5rem;
+				top: 5rem;
+				background-color: red;
+				height: 10rem;width: 10rem;
+			}
+			.d2{
+				position: absolute;
+				left: 38.8540%;
+				top:29.40%;
+				width: 20rem;
+				height: 20rem;
+				display: none;
+				/* border: 1px black solid; */
+			}
+			.d2 h3{
+				text-align: center;
+				font-size: 3rem;
+				font-weight: normal;
+				margin-top: 0.895rem;
+			}
+			.d2 h5{
+				text-align: center;
+				font-size: 2rem;
+				font-weight: normal;
+				margin-top: 0.895rem;
+			}
+			.d2 p{
+				text-align: center;
+				font-size: 1.25rem;
+				margin-top:0.94rem;
+			}
+			#d3{
+				display: none;
+			}
+			#pp{
+				position: absolute;
+				left: 15rem;
+				top: 9rem;
+				font-size: 1.5rem;
+				: 0.5rem;
+			}
+			.botn{
+				background-color: greenyellow;
+				color: white;
+				border: 0;
+				border-radius: 8px;
+				height: 3.2rem;
+				font-size: 2.125rem;
+				width: 9.5rem;
+				margin-left: 4.8rem;
+				margin-top: 4rem;
+				box-shadow:3px 2px 1px 1px limegreen;
+				/* font-weight: bold; */
+			}
+			.babt{
+				background-color: gainsboro;
+				color: white;
+				border: 0;
+				border-radius: 8px;
+				height: 3.2rem;
+				font-size: 2.125rem;
+				width: 9.5rem;
+				margin-left: 4.8rem;
+				margin-top: 4rem;
+				box-shadow:3px 2px 1px 1px darkgray;
+				/* font-weight: bold; */
+			}
+		</style>
+		<script type="text/javascript">
+			function love(){
+				document.getElementById('main').style.display='none';
+				document.getElementById('d2').style.display='block';
+				document.getElementById('pp').style.display='none';
+			}
+			function turnon(){
+				document.getElementById('d2').style.display='none';
+				document.getElementById('d3').style.display='block';
+			}
+			function turnon1(){
+				document.getElementById('d3').style.display='none';
+				document.getElementById('d4').style.display='block';
+			}
+			function babt(){
+				document.getElementById('d4').style.display='none';
+				document.getElementById('d5').style.display='block';
+			}
+			function jies(){
+				document.getElementById('d5').style.display='none';
+				document.write('没有服务器，所以只能把所有东西挤在一个文件上，好多特效之类的都没用上，而且设备兼容性不太好，可能会错位ヾ(≧▽≦*)o<br />敲代码也很快乐┗|｀O′|┛ 嗷~~，嘻嘻嘻');
+				document.write("<img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564717740264&di=77e12b02fa311e71ae9a2871f3d1cf5d&imgtype=0&src=http%3A%2F%2Fi-1.chuzhaobiao.com%2F2019%2F1%2F29%2Fd38c06dc-d37c-470d-a7cf-ceb6105adaca.gif'>");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="main" id="main" onclick="love()">
+			<div class="disc1"></div>
+			<div class="disc2"></div>
+			<div class="square"></div>
+		</div>
+		<p id="pp">点击"小心心"继续哦(❤ ω ❤)</p><br />
+		<div class="d2" id="d2">
+			<h3>I MISS YOU.</h3>
+			<p>相见亦无事，别后常忆君。</p>
+			<button type="button" class="botn" onclick="turnon()">继续</button>
+		</div>
+		<div class="d2" id="d3">
+			<h5>IT JUST FEELS LIKE SUMMER.</h5>
+			<p>我能否将你比作夏日，你比夏日更可爱温存。</p><br />
+			<button type="button"class="botn"  onclick="turnon1()">继续</button>
+		</div>
+		<div class="d2" id="d4">
+			<h5>YOU ARE SO QUTE...</h5>
+			<p>你最可爱，我说时来不及思索。而思索之后，还是这样说。</p>
+			<button type="button" class="botn" onclick="babt()">继续</button>
+		</div>
+		<div class="d2" id="d5">
+			<img width="700" height="394" class="currentImg" id="currentImg" style="left: 0px; top: 185px; width: 490px; height: 275.8px; cursor: pointer;" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1564681167193&amp;di=ee852fda2837d08f8906bc5543fbb84d&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201811%2F17%2F20181117191214_dflyi.thumb.700_0.png" >
+			<p>竟然被你看完了...嘿嘿嘿</p>
+			<p><small>别看就这几个简单页面，也写了一百五十多行代码呢(露出一副求夸奖的奸笑)</small></p>
+			<button type="button" class="babt" onclick="jies()">结束</button>
+		</div>
+	</body>
+</html>
