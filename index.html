@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>drm</title>
 		<style>
 			*{
 					margin: 0px;
@@ -103,6 +103,29 @@
 				box-shadow:3px 2px 1px 1px darkgray;
 				/* font-weight: bold; */
 			}
+			body{
+				animation:identifier 10s infinite;
+			}
+			@-webkit-keyframes identifier {
+				from {background-color: #fff;  }
+				50%{background-color: #66ccff;}
+				to { background-color: #fff; }
+			}
+			@-o-keyframes identifier {
+				from {background-color: #fff;  }
+				50%{background-color: #66ccff;}
+				to {  }
+			}
+			@-moz-keyframes identifier {
+				from { background-color: #fff; }
+				50%{background-color: #66ccff;}
+				to {background-color: #fff;  }
+			}
+			@keyframes identifier {
+				from { background-color: #fff; }
+				50%{background-color: #66ccff;}
+				to {  background-color: #fff;}
+			}
 		</style>
 		<script type="text/javascript">
 			function love(){
@@ -124,7 +147,7 @@
 			}
 			function jies(){
 				document.getElementById('d5').style.display='none';
-				document.write('没有服务器，所以只能把所有东西挤在一个文件上，好多特效之类的都没用上，而且设备兼容性不太好，可能会错位ヾ(≧▽≦*)o<br />敲代码也很快乐┗|｀O′|┛ 嗷~~，嘻嘻嘻');
+				document.write('设备兼容性不太好，可能会错位ヾ(≧▽≦*)o<br />敲代码也很快乐┗|｀O′|┛ 嗷~~，嘻嘻嘻');
 				document.write("<img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564717740264&di=77e12b02fa311e71ae9a2871f3d1cf5d&imgtype=0&src=http%3A%2F%2Fi-1.chuzhaobiao.com%2F2019%2F1%2F29%2Fd38c06dc-d37c-470d-a7cf-ceb6105adaca.gif'>");
 			}
 		</script>
@@ -154,8 +177,8 @@
 		<div class="d2" id="d5">
 			<img width="700" height="394" class="currentImg" id="currentImg" style="left: 0px; top: 185px; width: 490px; height: 275.8px; cursor: pointer;" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1564681167193&amp;di=ee852fda2837d08f8906bc5543fbb84d&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201811%2F17%2F20181117191214_dflyi.thumb.700_0.png" >
 			<p>竟然被你看完了...嘿嘿嘿</p>
-			<p><small>别看就这几个简单页面，也写了一百五十多行代码呢(露出一副求夸奖的奸笑)</small></p>
 			<button type="button" class="babt" onclick="jies()">结束</button>
 		</div>
 	</body>
 </html>
+
