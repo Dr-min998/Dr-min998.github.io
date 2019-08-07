@@ -23,7 +23,7 @@ function mas4(){
 }
 function mas5(){
 	document.getElementById('massage6').style.display="block";
-	setTimeout('mas6()',700);
+	document.getElementById('a11').style.display="block";
 }
 function mas6(){
 	document.getElementById('ques').style.display="block";
