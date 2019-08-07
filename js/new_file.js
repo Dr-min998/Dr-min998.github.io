@@ -28,6 +28,7 @@ function mas5(){
 function mas6(){
 	document.getElementById('ques').style.display="block";
 	document.getElementById('quesar').style.display="block";
+	document.getElementById('a11').style.display="none";
 }
 function anws(){
 	var name=document.getElementById('text1').value;
