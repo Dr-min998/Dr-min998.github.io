@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+}
+.loginbg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	background-color: greenyellow;
+	z-index: -1;
+}
+.login{
+	position: relative;
+	top: 15rem;
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+.login img{
+	width: 7.2rem;
+	height: auto;
+}
+.login p button{
+	width: 6.5rem;
+	height: 2.5rem;
+	border: 0;
+	border-radius: 10px;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	background-color: dimgray;
+	color: white;
+	opacity: 0.7;
+	box-shadow:2px 3px 0 0 #99bb6b;
+}
+#main{
+	width: 20rem;
+	height: 40.0rem;
+	position: relative;
+	top: 3rem;
+	left: 2.45rem;
+	/* background-color: lightgray; */
+	box-sizing: border-box;
+	/* border: 0.7px solid black; */
+	display: none;
+}
+.catbgi{
+	width: 100%;
+	height: 100%;
+}
+.chatb{
+	width: 100%;
+	height: 23rem;
+	position: absolute;
+	top: 8rem;
+	/* background-color: #00FFFF; */
+}
+.chat1{
+	width:100%;
+	height: 3.25rem;
+	margin:0.55rem 0 0.55rem 0;
+	display:none;
+	/* background: url(../img/chat1.png) no-repeat;
+	background-size: 7rem; */
+}
+.chat2{
+	width:100%;
+	height: 3.25rem;
+/* 	background: url(../img/chat2.png) no-repeat;
+	background-size: 7rem;
+	background-position: right; */
+	margin:0.55rem 0 0.55rem 0rem;
+	display:none;
+}
+.chatimg {
+	width: 2rem;
+	height: auto;
+}
+.chat2 p{
+	text-align: right;
+	margin-right: 10px;
+}
+.ques{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: #000;
+	opacity: 0.6;
+	display: none;
+}
+.quesar{
+	position: absolute;
+	top:30%;
+	left: 10%;
+	width: 20rem;
+	height: 20rem;
+	background-color: cornsilk;
+	border-radius: 10px;
+	display: none;
+	text-align: center;
+}
+#quesar input{
+	display:block;
+	width: 14rem;height: 2rem;
+	font-size: 1rem;
+	line-height: 1.54rem;
+	margin-bottom: 1.5rem;
+	margin: 1rem 0 1.5rem 3rem;
+	min-height: 1rem;
+	padding-left: 0.4625rem;
+	color: #3c3c3d;
+	border: 1.024px solid #ddd;
+}
+#quesar p{
+	margin: 4.45rem 0 0 0;
+}
+#quesarbt{
+	width: 8.1rem;
+	height: 2.5rem;
+	border: 0;
+	border-radius: 10px;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	background-color: lightpink;
+	color: white;
+}
+#nono{
+	width: 8.1rem;
+	height: 2.5rem;
+	border: 0;
+	border-radius: 10px;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	background-color: darkgray;
+	color: white;
+	opacity: 0.9;
+	margin-top: 0.5rem;
+}
+#quesar #tipss{
+	margin-top: 0.85rem;
+	color: red;
+}
