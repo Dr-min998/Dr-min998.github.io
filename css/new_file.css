@@ -90,6 +90,9 @@
 	background: #000;
 	opacity: 0.6;
 	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 .quesar{
 	position: absolute;
