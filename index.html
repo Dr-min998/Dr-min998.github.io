@@ -14,6 +14,23 @@
 				background: linear-gradient(to bottom right,#66ccff,#8DEEEE,#fff);
 			}
 		</style>
+		<script type="text/javascript">
+			function tim(){
+				var d=new Date();
+				var day1=d.getDate();
+				var h1=d.getHours();
+				var min1=d.getMinutes();
+				var sec1=d.getSeconds();
+				var day2='15'-day1;
+				var h2='22'-h1;
+				var min2='59'-min1;
+				var sec2='59'-sec1;
+				document.getElementById('timee').innerHTML=day2+'天'+h2+'小时'+min2+'分钟'+sec2+'秒<br /> 后删除'
+				
+			}
+			setInterval('tim()',1000);
+			// alert();
+		</script>
 	</head>
 	<body style="background-color: #FFC0CB;">
 		<div style="width: 100%;height: auto;text-align: center;">
@@ -29,6 +46,7 @@
 			<p><button id="dddbtn"><a href="https://huifu.qq.com/" style="color: black;">点击此处</a></button></p>
 			<p style="font-size: 0.99rem;">(QQ好友恢复官网，可以在对方不知情的情况下加回被您删除的好友。)</p>
 			<p style="text-decoration: line-through;">或者就当交个朋友撒</p>
+			<p id="timee" style="text-align: center;color: black;font-size: 1.125rem;"></p>
 		</div>
 		<hr>
 		<p>网页所属:<i>drm11@qq.com</i></p>
