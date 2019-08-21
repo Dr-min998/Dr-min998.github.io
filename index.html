@@ -4,154 +4,43 @@
 		<meta charset="utf-8">
 		<link rel="icon" href="img/无标题.png" type="img/x-ico" />
 		<title>Dr.min</title>
-		<style type="text/css">
-			#dddbtn{
-				width: 10rem;
-				height: 2.5rem;
-				line-height: 1.5rem;
-				font-size: 1.25rem;
-				border: 0;
-				background: linear-gradient(to bottom right,#66ccff,#8DEEEE,#fff);
-			}
-		</style>
-		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript">
-// 			function tim(){
-// 				var d=new Date();
-// 				var day1=d.getDate();
-// 				var h1=d.getHours();
-// 				var min1=d.getMinutes();
-// 				var sec1=d.getSeconds();
-// 				var day2='16'-day1;
-// 				var h2='22'-h1;
-// 				var min2='59'-min1;
-// 				var sec2='59'-sec1;
-// 				document.getElementById('timee').innerHTML=day2+'天'+h2+'小时'+min2+'分钟'+sec2+'秒<br /> 后删除'
-				
-// 			}
-// 			setInterval('tim()',1000);
-			// alert();
+		<!-- <script src="js/jquery1.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
 		</script>
+		<link rel="stylesheet" type="text/css" href="css/dismiss.css"/>
+		<script type="text/javascript" src="js/new_file.js"></script>
+		
 	</head>
-	<body style="background-color: #FFC0CB;">
-		<div style="width: 100%;height: auto;text-align: center;">
-			<img src="img/1189729288.png" style="width: 26.5rem;height: auto;">
-			<h2>添加微信好友</h2>
+	<body>
+		<div class="dbody1">
+			<div class="loading">
+			  <span>Loading...</span>
+			</div>
 		</div>
-		<div style="width: 100%;height: auto;text-align: center;">
-			<img src="img/832972464.png" style="width: 26.5rem;height: auto;">
-			<h2>添加QQ好友</h2>
+		<div class="fuck"id="fuck1">
+			<div class="centers">
+				<img src="img/用户.png" title="快点我啊" onclick="mytoggle()">
+				<p>clik me</p>
+			</div>
+			<div class="toggled">
+				<div class="tab1"></div><br>
+				<p><img src="img/logo1.png" onclick="show1(1)"></p>
+				<p><img src="img/logo2.png" onclick="show1(2)"></p>
+				<p><img src="img/logo3.png" onclick="show1(3)"></p>
+				<p><i onclick="show1(4)">more</i></p>
+			</div>
 		</div>
-		<div style="text-align: center;width: 100%;height: auto;">
-			<p style="font-size: 1.25rem;">达瓦里希，加个好友吧┏ (゜ω゜)=☞ </p>
-			<p><button id="dddbtn"><a href="https://huifu.qq.com/" style="color: black;">点击此处</a></button></p>
-	<!-- 		<p style="font-size: 0.99rem;">(QQ好友恢复官网，可以在对方不知情的情况下加回被您删除的好友。)</p>
-			<p style="text-decoration: line-through;">或者就当交个朋友撒</p>
-			<p id="timee" style="text-align: center;color: black;font-size: 1.125rem;"></p> -->
-		<p id="tapp"></p>
+		<div class="ed">
+			<div class="closeEd" onclick="clo()">
+				<img src="img/关闭.png">
+			</div>
+			<div class="edInner">
+				<p id="tapp"></p>
+			</div>
 		</div>
-			<script type="text/javascript">
-				function already(){
-					var nowTime=new Date();
-					let year1=nowTime.getFullYear();
-					let month1=nowTime.getMonth()+1;
-					let day1=nowTime.getDate();
-					let h1=nowTime.getHours();
-					let min1=nowTime.getMinutes();
-					let sec1=nowTime.getSeconds();
-					var begain =new Array();
-					begain[0]=2019;
-					begain[1]=8;
-					begain[2]=2;
-					begain[3]=17;
-					begain[4]=32;
-					begain[5]=24;
-					if (sec1>=begain[5]) {
-						var sec2=sec1-begain[5];
-					} else{
-						var sec2=60+sec1-begain[5];
-						min1--;
-					}
-					if (min1>=begain[4]) {
-						var min2=min1-begain[4];
-					} else{
-						var min2=60+min1-begain[4];
-						h1--;
-					}
-					if (h1>=begain[3]) {
-						var h2=h1-begain[3];
-					} else{
-						var h2=24+h1-begain[3];
-						day1--;
-					}
-					var month3=30;
-					var day2=0;
-					if (year1>2019) {
-						var yy=year1-begain[0];
-						if (yy<=4) {
-							if (year1%4!=0) {
-								day2=day2+(yy*365);
-							} else{
-								day2=day2+(yy*365);
-								day2++;
-							}
-						} else {
-							day2=day2+(yy*365);
-							let yd=yy%4;
-							day2=day2+yd;
-						}
-						if (day1>=begain[2]) {
-							var day2=day2+day1-begain[2];
-							if(month1==2){
-								day2=day2-2;
-								var month3=28;
-							}else if (month1==1||month1==3||month1==5||month1==7||month1==8||month1==10||month1==12) {
-								day2++;
-								var month3=31;
-							}
-						} else{
-							var day2=day2+30+day1-begain[2];
-							if(month1==2){
-								day2=day2-2;
-								var month3=28;
-							}else if (month1==1||month1==3||month1==5||month1==7||month1==8||month1==10||month1==12) {
-								day2++;
-								var month3=31;
-							}
-							month1--;
-						}
-						if (month1>=begain[1]) {
-							var month2=month1-begain[1];
-							day2=day2+(month3*month2);
-						} else{
-							var month2=12+month1-begain[1];
-							day2=day2+(month3*month2);
-							year1--;
-						}
-					} else {
-						if(month1==9||month1==11){
-							var ai=1;
-						} else {
-							var ai=0;
-						}
-						var yy=0;
-						if (day1>=begain[2]) {
-							var day2=day1-begain[2];
-						} else{
-							var day2=31+day1-begain[2]-ai;
-							month1--;
-						}
-						var month2=month1-begain[1];
-						day2=day2+(30+ai)*month2;
-						ai=0;
-					}
-					
-					$('#tapp').text('本网站已开设: '+day2+'天'+h2+'小时'+sec2+"秒" );
-				}
-				already();
-				setInterval("already()",1000);
-			</script>
-		<hr>
-		<p>网页所属:<i>drm11@qq.com</i></p>
+		
+		
+		
 	</body>
 </html>
+
