@@ -34,7 +34,7 @@ function show1(val){
 			break;
 		case 3:$('.edInner').html('<img src="img/1728478816.png" >');
 			break;
-		case 4:ready1();
+		case 4:$('.edInner').html('<p id="tapp"></p><br><span>本网页所属：Dr.min</span>');already();
 			break;
 		default:
 			break;
@@ -43,12 +43,8 @@ function show1(val){
 function clo(){
 	$('.fuck').css("z-index","0");
 	$('.ed').hide('fast');
-	clearInterval('already()');
 }
-function ready1(){
-	already();
-	setInterval("already()",1000);
-}
+var hhii=1;
 
 function already(){
 					var nowTime=new Date();
@@ -144,5 +140,15 @@ function already(){
 						day2=day2+(30+ai)*month2;
 						ai=0;
 					}
-					$('#tapp').text('本网站已开设: '+day2+'天'+h2+'小时'+sec2+"秒" );
+					if (sec2<10) {
+						$('#tapp').text('本网站已开设: '+day2+'天'+h2+'小时0'+sec2+"秒" );
+					} else{
+						$('#tapp').text('本网站已开设: '+day2+'天'+h2+'小时'+sec2+"秒" );
+					}
+					hhii++;
+					if (hhii<=30) {
+						setTimeout("already()",1000);
+					} else{
+						return;
+					}
 }
