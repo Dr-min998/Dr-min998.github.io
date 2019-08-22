@@ -173,4 +173,10 @@ body{
 	line-height: 3rem;
 	font-size: 1.5rem;
 	margin-top: 12rem;
+	cursor: wait;
+}
+.edInner span{
+	display: block;
+	text-align: center;
+	cursor: wait;
 }
