@@ -149,6 +149,7 @@ function already(){
 					if (hhii<=30) {
 						setTimeout("already()",1000);
 					} else{
+						hhii=1;
 						return;
 					}
 }
