@@ -152,19 +152,20 @@ body{
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
-.closeEd{
-	width: 4rem;
-	height: 4rem;
-	/* background-color: #fff; */
-	border-radius: 100%;
+.edInner::before{
+	content: '';
+	width: 6rem;
+	height: 6rem;
 	position: absolute;
-	right: 10%;
-	top: 12.0%;
+	top: -6rem;
+	right: -6rem;
+	background: url(../img/关闭.png) no-repeat;
+	-webkit-background-size: 6rem;
+	background-size: 6rem;
+	z-index: 1002;
+	cursor: pointer;
 }
-.closeEd img{
-	width: 4rem;
-	height: auto;
-}
+
 .edInner img{
 	width: 30rem;
 	height: auto;
