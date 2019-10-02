@@ -1,10 +1,9 @@
 *{
 	margin: 0;
 	padding: 0;
+	user-select: none;
 }
-body{
-	background-color: #f3f3f3; 
-}
+
 .dbody1{
   margin: 0;
   padding: 0;
@@ -73,9 +72,9 @@ body{
 
 .fuck{
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: 50%;
-	left: 50%;
+	left: 96.7%;
 	transform: translateX(-20%);
 	height: 10rem;
 	width: 16rem;
@@ -91,10 +90,12 @@ body{
 	height: 5.2rem;
 	text-align: center;
 	transition: .5s;
+	cursor: pointer;
+	/* box-shadow: 0 0 0 0 #000000; */
 	/* transform: translate(-50%,-50%); */
 }
 .centers img{
-	width: 5.1rem;
+	width: 3rem;
 	height: auto;
 }
 .centers p{
@@ -103,7 +104,7 @@ body{
 
 .toggled{
 	position: relative;
-	/* transform: translate(-50%,-50%); */
+	/* transform: translate(-50%,0); */
 	display: none;
 	width: 5.2rem;
 	height: 20rem;
@@ -152,20 +153,6 @@ body{
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
-.edInner::before{
-	content: '';
-	width: 6rem;
-	height: 6rem;
-	position: absolute;
-	top: -6rem;
-	right: -6rem;
-	background: url(../img/关闭.png) no-repeat;
-	-webkit-background-size: 6rem;
-	background-size: 6rem;
-	z-index: 1002;
-	cursor: pointer;
-}
-
 .edInner img{
 	width: 30rem;
 	height: auto;
@@ -181,4 +168,89 @@ body{
 	display: block;
 	text-align: center;
 	cursor: wait;
+}
+.edInner::before{
+	content: '';
+	width: 6rem;
+	height: 6rem;
+	position: absolute;
+	top: -6rem;
+	right: -6rem;
+	background: url(../img/关闭.png) no-repeat;
+	-webkit-background-size: 6rem;
+	background-size: 6rem;
+	z-index: 1002;
+	cursor: pointer;
+}
+
+body{
+	background-color: #d0ecf8;
+}
+.clip{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50vw;
+	transform: translate(-50%,-50%);
+	display: none;
+}
+.clip p{
+	text-align: center;
+	color: #cfcece02;
+	font-size: 14rem;
+	font-weight: 850;
+	background: url(../img/ae-video-1000x494.jpg);
+	-webkit-background-clip: text;
+	transition: 1s;
+}
+
+.center{
+	width: 80%;
+	height: 50vh;
+	transform: translate(-50%,-50%);
+	transition: .5s;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	overflow: hidden;
+	display: none;
+}
+.crad{
+	height: 80%;
+	width: 15rem;
+	float: left;
+	position: relative;
+	background-color: #def3b79e;
+	margin:2rem 2rem;
+	cursor: pointer;
+}
+.crad h2{
+	font-size: 2.5rem;
+	width: 3.5rem;
+	height: 3.5;
+	background-color: greenyellow;
+	color: white;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 100%;
+	transition: .65s;
+}
+.center .crad:hover h2{
+	background-color: #fff;
+	color: #00000080;
+}
+.center:hover .crad{
+	/* background-color: #66ccffd6; */
+	transform: perspective(31.25rem) rotateY(30deg);
+}
+.center .crad:hover{
+	background-color: #66ccff8c;
+	transform: perspective(31.25rem) rotateY(0deg);
+}
+.center .crad:hover~.crad{
+	/* background-color: #66ccffd6; */
+	transform: perspective(31.25rem) rotateY(-30deg);
 }
