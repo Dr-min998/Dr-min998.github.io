@@ -2,6 +2,9 @@ $(document).ready(function(){
 	setTimeout(()=>{
 		$('.loading').fadeOut('slow',()=>{
 			$('.dbody1').slideUp('slow',()=>{
+				$('.clip').show('0.56s',()=>{
+					$('.center').show('slow');
+				});
 				$('.fuck').show('slow',()=>{
 					$('.fuck').css("z-index","0");
 				});
@@ -17,7 +20,7 @@ function mytoggle(){
 	if (gg==false) {
 		gg=true;
 	} else{
-		$('.centers img').css("width","5.1rem");
+		$('.centers img').css("width","3rem");
 		$('.fuck').css("top","50%");
 		gg=false;
 	}
@@ -26,6 +29,7 @@ function mytoggle(){
 function show1(val){
 	$('.fuck').css("z-index","-1");
 	$('.ed').show('fast');
+	$('.center').hide('fast');
 	$('.edInner').show('fast');
 	switch (val){
 		case 1:$('.edInner').html('<img src="img/832972464.png" >');
@@ -40,10 +44,13 @@ function show1(val){
 			break;
 	}
 }
+
 function clo(){
 	$('.fuck').css("z-index","0");
 	$('.ed').hide('fast');
+	$('.center').show('fast');
 }
+
 var hhii=1;
 
 function already(){
