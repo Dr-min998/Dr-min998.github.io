@@ -9,12 +9,36 @@
 		</script>
 		<link rel="stylesheet" type="text/css" href="css/dismiss.css"/>
 		<script type="text/javascript" src="js/new_file.js"></script>
-		
+		<script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
+		<script type="text/javascript">
+			if (device.mobile() == true) {
+				window.location = "phone.html";
+			} else{
+				window.location = "#";
+			}
+		</script>
 	</head>
 	<body>
 		<div class="dbody1">
 			<div class="loading">
 			  <span>Loading...</span>
+			</div>
+		</div>
+		<div class="clip">
+			<p>D R M</p>
+		</div>
+		<div class="center">
+			<div class="crad">
+				<h2>1</h2>
+			</div>
+			<div class="crad">
+				<h2>2</h2>
+			</div>
+			<div class="crad">
+				<h2>3</h2>
+			</div>
+			<div class="crad">
+				<h2>4</h2>
 			</div>
 		</div>
 		<div class="fuck"id="fuck1">
@@ -34,7 +58,9 @@
 			
 			<div class="edInner" onclick="clo()" title="点击关闭"></div>
 		</div>
-		
+		<script type="text/javascript">
+			console.log('device.mobile() === %s', device.mobile());
+		</script>
 		
 		
 	</body>
