@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="img/无标题.png" type="img/x-ico" />
+		<title>Dr.min</title>
+		<!-- <script src="js/jquery1.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/phone.css"/>
+		<script src="js/phone.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
+		<script type="text/javascript">
+			if (device.mobile() == true) {
+				window.location = "#";
+			} else{
+				window.location = "dismiss.html";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="dbody">
+			<div class="loading">
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+				<div class="ldob"></div>
+			</div>
+		</div>
+		{{message}}
+	</body>
+</html>
