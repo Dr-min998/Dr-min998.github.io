@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body{
-	background-color: #7dbfff;
+	background-color: #fff;
 }
 .dbody{
 	background-color: #85dfed;
@@ -68,15 +68,23 @@ body{
 	}
 }
 
+.dbody-after{
+	display: none;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-color: #7dbfff;
+}
 /*底部导航*/
 #nav-tab {
-  position: relative;
-
-  width: 90%;
+  position: absolute;
+  bottom: 6.5px;
+  left: 50%;
+  width: 92%;
   height: 150px;
   background-color: #fff;
   display: flex;
-
+  transform: translateX(-50%);
   border-radius: 20px 20px 90px 90px;
 
   overflow: hidden;
@@ -137,4 +145,40 @@ body{
   border-radius: 20px;
 
   transition: 0.3s;
+}
+
+/*窗口*/
+.nf{
+	background-color: #fff;
+	width: 85%;
+	height: 65vh;
+	border-radius: 3rem;
+	position: absolute;
+	left: 50%;
+	bottom: 170px;
+	transform: translate(-50%,-18%);
+}
+.nf-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	overflow: hidden;
+}
+.nf h2{
+	font-size: 6rem;
+}
+.nf h3{
+	font-size: 3rem;
+}
+#nf-bottom{
+	content: '';
+	width: 4rem;
+	height: 4rem;
+	background: #FFFFFF;
+	position: absolute;
+	left: 5rem;
+	bottom: -1.5rem;
+	transform: rotate(45deg);
 }
