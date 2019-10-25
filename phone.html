@@ -19,14 +19,7 @@
 				window.location = "dismiss.html";
 			}
 		</script>
-		<script type="text/javascript">
-			$('#main').css("height",window.innerHeight+100);   
-			window.scrollTo(0, 1);   
-			//重置成新高度   
-			$("#main").css("height",window.innerHeight);   
-			//非常重要，用于兼容不同机型，防止浏览器窗口移动   
-			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-		</script>
+		
 	</head>
 	<body>
 		<div class="dbody">
@@ -46,12 +39,19 @@
 		<div class="dbody-after">
 			<div id="nav-tab" ref="navtab">
 				<div class="nav-tab-item" :class="{'active':activeIndex == index}" v-for="(item,index) in items"
-				@click="activeIndex = index"
+				@click="chg(index)"
 				:style="{'width': `${activeIndex == index ? itemWidth + 10: itemWidth}%`}">
 				<i :class=['nav-tab-item_icon','iconfont',item.icon]></i>
 				<p class="nav-tab-item_label">{{item.label}}</p>
 				</div>
 				<div class="nav-tab-overlay" :style="{'left':`${activeIndex * itemWidth}%`,'width':`${itemWidth + 10}%`}"></div>
+			</div>
+			<div class="nf">
+				<div class="nf-center">
+					<h2>404</h2>
+					<h3>NOT FOUND</h3>
+				</div>
+				<div id="nf-bottom"></div>
 			</div>
 		</div>
 		
@@ -74,8 +74,46 @@
 				itemWidth() {
 				return 90 / this.items.length;
 				}
+			},
+			methods:{
+				chg:function(index){
+					this.activeIndex = index;
+					let nn=index*22+12.5;
+					$('#nf-bottom').css({'left':`${nn}%`},()=>{
+						console.log('1');
+					});
+					
+				}
 			}
 			})
-		</script>	
+		</script>
+		<script type="text/javascript">
+			function hideAddressBar(bPad) {
+				// Big screen. Fixed chrome likely.
+				if(screen.width > 980 || screen.height > 980) return;
+				// Standalone (full screen webapp) mode
+				if(window.navigator.standalone === true) return;
+				// Page zoom or vertical scrollbars
+				if(window.innerWidth !== document.documentElement.clientWidth) {
+					// Sometimes one pixel too much. Compensate.
+					if((window.innerWidth - 1) !== document.documentElement.clientWidth) return;
+				}
+				setTimeout(function() {
+					// Already scrolled?
+					if(window.pageYOffset !== 0) return;
+					// Perform autoscroll
+					window.scrollTo(0, 1);
+					// Reset body height and scroll
+					if(bodyTag !== undefined) bodyTag.style.height = window.innerHeight + 'px';
+					window.scrollTo(0, 0);
+				}, 1000);
+			}
+			// Check that the current page can be scrolled first. Pad content if necessary.
+			if(document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+				// Extend body height to overflow and cause scrolling
+				bodyTag = document.getElementsByTagName('body')[0];
+				bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px'; // Viewport height at fullscreen
+			}
+		</script>
 	</body>
 </html>
