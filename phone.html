@@ -2,20 +2,30 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="icon" href="img/无标题.png" type="img/x-ico" />
 		<title>Dr.min</title>
-		<!-- <script src="js/jquery1.js" type="text/javascript" charset="utf-8"></script> -->
+		<link rel="icon" href="img/无标题.png" type="img/x-ico" />
+		
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_1471409_g6hvg6yqo15.css">
+		<link rel="stylesheet" type="text/css" href="css/phone.css"/>
 		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
 		</script>
-		<link rel="stylesheet" type="text/css" href="css/phone.css"/>
+		
 		<script src="js/phone.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
 		<script type="text/javascript">
 			if (device.mobile() == true) {
 				window.location = "#";
 			} else{
-				window.location = "index.html";
+				window.location = "dismiss.html";
 			}
+		</script>
+		<script type="text/javascript">
+			$('#main').css("height",window.innerHeight+100);   
+			window.scrollTo(0, 1);   
+			//重置成新高度   
+			$("#main").css("height",window.innerHeight);   
+			//非常重要，用于兼容不同机型，防止浏览器窗口移动   
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 		</script>
 	</head>
 	<body>
@@ -33,6 +43,39 @@
 				<div class="ldob"></div>
 			</div>
 		</div>
-		{{message}}
+		<div class="dbody-after">
+			<div id="nav-tab" ref="navtab">
+				<div class="nav-tab-item" :class="{'active':activeIndex == index}" v-for="(item,index) in items"
+				@click="activeIndex = index"
+				:style="{'width': `${activeIndex == index ? itemWidth + 10: itemWidth}%`}">
+				<i :class=['nav-tab-item_icon','iconfont',item.icon]></i>
+				<p class="nav-tab-item_label">{{item.label}}</p>
+				</div>
+				<div class="nav-tab-overlay" :style="{'left':`${activeIndex * itemWidth}%`,'width':`${itemWidth + 10}%`}"></div>
+			</div>
+		</div>
+		
+		<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+		<script>
+			new Vue({
+			el: '#nav-tab',
+			data() {
+				return {
+				items: [
+					{ icon: 'icon-shouye', label: '首页' },
+					{ icon: 'icon-guanzhu', label: '关注' },
+					{ icon: 'icon-faxian', label: '发现' },
+					{ icon: 'icon-xiaoxizhongxin', label: '消息' },
+				],
+				activeIndex: 0,
+				}
+			},
+			computed: {
+				itemWidth() {
+				return 90 / this.items.length;
+				}
+			}
+			})
+		</script>	
 	</body>
 </html>
