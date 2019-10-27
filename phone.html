@@ -48,9 +48,31 @@
 				<div class="nav-tab-overlay" :style="{'left':`${activeIndex * itemWidth}%`,'width':`${itemWidth + 10}%`}"></div>
 			</div>
 			<div class="nf">
-				<div class="nf-center">
+				<div class="nf-center nfc0">
 					<h2>404</h2>
 					<h3>NOT FOUND</h3>
+				</div>
+				<div class="nf-center nfc1">
+					<h2>404</h2>
+					<h3>NOT FOUND</h3>
+				</div>
+				<div class="nf-center nfc2">
+					<h2>404</h2>
+					<h3>NOT FOUND</h3>
+				</div>
+				<div class="nf-center nfc3">
+					<div class="user1">
+						<div class="user-img"></div>
+						<div class="user-msg">
+							<p class="user-name" style="font-weight: bold;">DRM
+								<small id="time1"></small>
+							</p>
+							<p class="user-txt"style="font-size: 2rem;">Hellow
+								<span class="m1">1</span>
+							</p>
+						</div>
+					</div>
+					<!-- 预留端口 -->
 				</div>
 				<div id="nf-bottom"></div>
 			</div>
@@ -80,6 +102,7 @@
 				chg:function(index){
 					this.activeIndex = index;
 					let nn=index*22+12.5;
+					jjj(index);
 					$('#nf-bottom').css({'left':`${nn}%`},()=>{
 						console.log('1');
 					});
