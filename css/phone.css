@@ -159,12 +159,19 @@ body{
 	transform: translate(-50%,-18%);
 }
 .nf-center{
+	width: 98%;
+	height: 90%;
+	/* border-radius: 2.5rem; */
+	/* background-color: #66ccff; */
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
 	text-align: center;
 	overflow: hidden;
+}
+.nfc0{
+	z-index: 1;
 }
 .nf h2{
 	font-size: 6rem;
@@ -176,9 +183,59 @@ body{
 	content: '';
 	width: 4rem;
 	height: 4rem;
+	transition: .5s;
 	background: #FFFFFF;
 	position: absolute;
 	left: 5rem;
 	bottom: -1.5rem;
 	transform: rotate(45deg);
+}
+
+/*消息列表*/
+.user1{
+	width: 100%;
+	height: 8rem;
+	position: relative;
+	border-top: 1.2px solid #dfe6e9;
+	border-bottom: 1.6px solid #dfe6e9;
+	overflow: hidden;
+	display: none;
+}
+.user-img{
+	background-image: linear-gradient(135deg,#00cec9,#fab1a0 60%,#e17055 91%);
+	border-radius: 100%;
+	margin: 0.5rem;
+	width: 7rem;
+	height: 7rem;
+	float: left;
+}
+.user-msg{
+	/* background-color: #66ccff; */
+	width: 82%;
+	height: 7rem;
+	margin: 0.5rem;
+	float: left;
+}
+.user-msg p{
+	line-height: 3.5rem;
+	text-align: left;
+	font-size: 2.2rem;
+}
+.user-msg p small{
+	font-weight: normal;
+	float: right;
+	text-align: right;
+	margin-right: 1rem;
+}
+.user-msg p span{
+	float: right;
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	background-color: red;
+	color: #FFFFFF;
+	border-radius: 100%;
+	margin-right: 1.2rem;
 }
