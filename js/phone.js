@@ -15,7 +15,11 @@ function jjj(index){
 			let date = new Date();
 			let hour=date.getHours();
 			let min=date.getMinutes();
-			$('#time1').text(hour+":"+min);
+			if (min<10) {
+				$('#time1').text(hour+":0"+min);
+			} else{
+				$('#time1').text(hour+":"+min);
+			}
 		});
 	}
 }
