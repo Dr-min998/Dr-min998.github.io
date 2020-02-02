@@ -74,12 +74,12 @@ function already(){
 						var sec2=60+sec1-begain[5];
 						min1--;
 					}
-					if (min1>=begain[4]) {
-						var min2=min1-begain[4];
-					} else{
-						var min2=60+min1-begain[4];
-						h1--;
-					}
+					// if (min1>=begain[4]) {
+					// 	var min2=min1-begain[4];
+					// } else{
+					// 	var min2=60+min1-begain[4];
+					// 	h1--;
+					// }
 					if (h1>=begain[3]) {
 						var h2=h1-begain[3];
 					} else{
@@ -88,8 +88,12 @@ function already(){
 					}
 					var month3=30;
 					var day2=0;
+					min2=(min1-begain[4]+70)%60;
 					if (year1>2019) {
 						var yy=year1-begain[0];
+						if (month1<begain[1]) {
+							yy--;
+						}
 						if (yy<=4) {
 							if (year1%4!=0) {
 								day2=day2+(yy*365);
@@ -130,7 +134,7 @@ function already(){
 							day2=day2+(month3*month2);
 							year1--;
 						}
-					} else {
+					} else if(year1==2019){
 						if(month1==9||month1==11){
 							var ai=1;
 						} else {
@@ -148,9 +152,9 @@ function already(){
 						ai=0;
 					}
 					if (sec2<10) {
-						$('#tapp').text('本网站已开设: '+day2+'天'+h2+'小时0'+sec2+"秒" );
+						$('#tapp').text('本网站已开设: '+day2+'天'+h2+'小时0'+min2+"分"+sec2+"秒" );
 					} else{
-						$('#tapp').text('本网站已开设: '+day2+'天'+h2+'小时'+sec2+"秒" );
+						$('#tapp').text('本网站已开设: '+day2+'天'+h2+'小时'+min2+"分"+sec2+"秒" );
 					}
 					hhii++;
 					if (hhii<=30) {
