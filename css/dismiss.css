@@ -3,254 +3,135 @@
 	padding: 0;
 	user-select: none;
 }
-
-.dbody1{
-  margin: 0;
-  padding: 0;
-  background: #34495e;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "montserrat",sans-serif;
-  z-index: 1000;
-}
-
-.loading{
-  width: 12.5rem;
-  height: 12.5rem;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border-top: 0.625rem solid #e74c3c;
-  position: relative;
-  animation: a1 2s linear infinite;
-}
-
-.loading::before,.loading::after{
-  content: '';
-  width: 12.5rem;
-  height: 12.5rem;
-  position: absolute;
-  left: 0;
-  top: -0.625rem;
-  box-sizing: border-box;
-  border-radius: 50%;
-}
-
-.loading::before{
-  border-top: 0.625rem solid #e67e22;
-  transform: rotate(120deg);
-}
-
-.loading::after{
-  border-top: 0.625rem solid #3498db;
-  transform: rotate(240deg);
-}
-
-.loading span{
-  position: absolute;
-  width: 12.5rem;
-  height: 12.5rem;
-  color: #fff;
-  text-align: center;
-  line-height: 12.5rem;
-  animation: a2 2s linear infinite;
-}
-
-@keyframes a1 {
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes a2 {
-  to{
-    transform: rotate(-360deg);
-  }
-}
-
-.fuck{
-	display: none;
-	position: fixed;
-	top: 50%;
-	left: 96.7%;
-	transform: translateX(-20%);
-	height: 10rem;
-	width: 16rem;
-	align-items: center;
-	justify-content: center;
-	transition: 1s;
-}
-.centers{
-	/* position: absolute;
-	top: 50%;
-	left: 50%; */
-	width: 5.2rem;
-	height: 5.2rem;
-	text-align: center;
-	transition: .5s;
-	cursor: pointer;
-	/* box-shadow: 0 0 0 0 #000000; */
-	/* transform: translate(-50%,-50%); */
-}
-.centers img{
-	width: 3rem;
-	height: auto;
-}
-.centers p{
-	text-align: center;
-}
-
-.toggled{
-	position: relative;
-	/* transform: translate(-50%,0); */
-	display: none;
-	width: 5.2rem;
-	height: 20rem;
-	background-color: #fff;
-	box-shadow: 5px 6px #0000002e;
-}
-.toggled .tab1{
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 1.41rem;
-	height: 1.41rem;
-	background-color: #fff;
-	transform: translate(-50%,-50%) rotate(45deg);
-	border-top: 1px solid #0000002e;
-}
-.toggled p{
-	text-align: center;
-	margin: 1rem 0 1rem 0;
-}
-.toggled p img{
-	width: 4rem;
-	height: auto;
-	cursor: pointer;
-}
-.toggled p i{
-	text-align: center;
-	color: #000;
-	text-decoration: underline;
-	cursor: pointer;
-}
-
-.ed{
-	display: none;
-	width: 100%;
-	height: 100vh;
-	background-color: #00000073;
-	z-index: 1001;
-}
-.edInner{
-	width: 30rem;
-	height: 30rem;
-	background-color: #FFFFFF;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-}
-.edInner img{
-	width: 30rem;
-	height: auto;
-}
-.edInner p{
-	text-align: center;
-	line-height: 3rem;
-	font-size: 1.5rem;
-	margin-top: 12rem;
-	cursor: wait;
-}
-.edInner span{
-	display: block;
-	text-align: center;
-	cursor: wait;
-}
-.edInner::before{
-	content: '';
-	width: 6rem;
-	height: 6rem;
-	position: absolute;
-	top: -6rem;
-	right: -6rem;
-	background: url(../img/关闭.png) no-repeat;
-	-webkit-background-size: 6rem;
-	background-size: 6rem;
-	z-index: 1002;
-	cursor: pointer;
-}
-
 body{
-	background-color: #d0ecf8;
+	background-color: #e5e5e5;
+	overflow-x: hidden;
 }
-.clip{
+::-webkit-scrollbar { 
+    display:none; 
+}
+.svg_body1{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #e5e5e5;
+	cursor: none;
+	z-index: 100;
+	/* opacity: 0.7; */
+}
+.svg_body1 svg{
 	position: absolute;
-	top: 50%;
 	left: 50%;
-	width: 50vw;
-	transform: translate(-50%,-50%);
-	display: none;
+	right: 50%;
+	transform: translate(-48%,50%) scale(0.85);
 }
-.clip p{
-	text-align: center;
-	color: #cfcece02;
-	font-size: 14rem;
-	font-weight: 850;
-	background: url(../img/ae-video-1000x494.jpg);
-	-webkit-background-clip: text;
-	transition: 1s;
+.code_d path{
+	stroke-width: 27;
+	stroke-dasharray:1500;
+	stroke-dashoffset:1500;
+	-webkit-animation:dash1 4s ease;
+	animation:dash1 4s ease;
+	animation-fill-mode: forwards;
+}
+.code_r path{
+	stroke-width: 27;
+	stroke-dasharray:1500;
+	stroke-dashoffset:1500;
+	-webkit-animation:dash1 4s ease;
+	animation:dash1 4s ease;
+	animation-fill-mode: forwards;	
+}
+.code_m path{
+	stroke-width:27;
+	stroke-dasharray:1500;
+	stroke-dashoffset:1500;
+	-webkit-animation:dash1 4s ease;
+	animation:dash1 4s ease;
+	animation-fill-mode: forwards;	
+}
+@-webkit-keyframes dash1 {
+	0%{
+		stroke-dashoffset:1500;
+	}
+	50% {
+		stroke-dashoffset:0;
+	}
+	100%{
+		stroke-dashoffset:1500;
+	}
+}
+@keyframes dash1 {
+	0%{
+		stroke-dashoffset:1500;
+	}
+	50%{
+		stroke-dashoffset:0;
+	}
+	100%{
+		stroke-dashoffset:1500;
+	}
+}
+#get_top{
+	position: fixed;
+	right: 40px;
+	bottom: 75px;
+	width: 54px;
+	height: 54px;
+	/* background-color: #ffff7f;
+	cursor: pointer; */
+	display: none;
+	z-index: 50;
+}
+#get_top a{
+	width: 54px;
+	height: 54px;
+}
+#get_top a svg{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	opacity: 0;
+	animation: breath01 3s linear infinite;
+	-webkit-animation:  breath01 3s linear infinite;
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+}
+#get_top:hover a svg{
+	opacity: 1;
+	animation-play-state: paused;
+}
+.laps path{
+	fill: transparent;
+	 stroke:black;
+	 stroke-width: 8 ;
+}
+@-webkit-keyframes breath01 {
+	to{
+		opacity: 1;
+	}
+}
+@keyframes breath01 {
+	to{
+		opacity: 1;
+	}
 }
 
-.center{
-	width: 80%;
-	height: 50vh;
-	transform: translate(-50%,-50%);
-	transition: .5s;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	overflow: hidden;
+#body_div{
+	width: 100vw;
+	height: auto;
 	display: none;
 }
-.crad{
-	height: 80%;
-	width: 15rem;
-	float: left;
+.index_div{
 	position: relative;
-	background-color: #def3b79e;
-	margin:2rem 2rem;
-	cursor: pointer;
+	background: #e5e5e5;
+	width: 100vw;
+	height: 100vh;
+	color: #4298E7;
 }
-.crad h2{
-	font-size: 2.5rem;
-	width: 3.5rem;
-	height: 3.5;
-	background-color: greenyellow;
-	color: white;
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	border-radius: 100%;
-	transition: .65s;
-}
-.center .crad:hover h2{
-	background-color: #fff;
-	color: #00000080;
-}
-.center:hover .crad{
-	/* background-color: #66ccffd6; */
-	transform: perspective(31.25rem) rotateY(30deg);
-}
-.center .crad:hover{
-	background-color: #66ccff8c;
-	transform: perspective(31.25rem) rotateY(0deg);
-}
-.center .crad:hover~.crad{
-	/* background-color: #66ccffd6; */
-	transform: perspective(31.25rem) rotateY(-30deg);
+.sec_div{
+	background-color: #e5e5e5;
+	height: 100vh;
 }
