@@ -10,6 +10,55 @@ body{
 ::-webkit-scrollbar { 
     display:none; 
 }
+.bgi{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 101;
+}
+.bgi svg{
+	opacity: 0.8;
+}
+.stars{
+	transform: translate(-10%,0);
+	animation: breath03 30s linear infinite;
+	-webkit-animation:  breath03 30s linear infinite;
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+	opacity: 1;
+}
+@-webkit-keyframes breath03{
+	to{
+		transform: translate(-30%);
+		opacity: 0.7;
+	}
+}
+@keyframes breath03{
+	to{
+		transform: translate(-17%);
+		opacity: 0.7;
+	}
+}
+.fly_stars{
+	transform: translate(100%,-200%);
+	animation: flystar 10s linear infinite;
+	-webkit-animation:  flystar 10s linear infinite;
+}
+.fstar02{
+	animation-delay: 4s;
+}
+@-webkit-keyframes flystar{
+	to{
+		transform: translate(-200%,200%);
+	}
+}
+@keyframes flystar{
+	to{
+		transform: translate(-100%,200%);
+	}
+}
 .svg_body1{
 	position: fixed;
 	left: 0;
@@ -17,6 +66,7 @@ body{
 	width: 100vw;
 	height: 100vh;
 	background-color: #e5e5e5;
+	background-image: linear-gradient(#09073c,#090723,#000000);
 	cursor: none;
 	z-index: 100;
 	/* opacity: 0.7; */
@@ -28,7 +78,7 @@ body{
 	transform: translate(-48%,50%) scale(0.85);
 }
 .code_d path{
-	stroke-width: 27;
+	stroke-width: 36;
 	stroke-dasharray:1500;
 	stroke-dashoffset:1500;
 	-webkit-animation:dash1 4s ease;
@@ -36,7 +86,7 @@ body{
 	animation-fill-mode: forwards;
 }
 .code_r path{
-	stroke-width: 27;
+	stroke-width: 36;
 	stroke-dasharray:1500;
 	stroke-dashoffset:1500;
 	-webkit-animation:dash1 4s ease;
@@ -44,7 +94,7 @@ body{
 	animation-fill-mode: forwards;	
 }
 .code_m path{
-	stroke-width:27;
+	stroke-width:36;
 	stroke-dasharray:1500;
 	stroke-dashoffset:1500;
 	-webkit-animation:dash1 4s ease;
@@ -94,19 +144,11 @@ body{
 	top: 50%;
 	transform: translate(-50%,-50%);
 	opacity: 0;
+	transition: .5s;
 	animation: breath01 3s linear infinite;
 	-webkit-animation:  breath01 3s linear infinite;
 	animation-direction:alternate;
 	-webkit-animation-direction:alternate;
-}
-#get_top:hover a svg{
-	opacity: 1;
-	animation-play-state: paused;
-}
-.laps path{
-	fill: transparent;
-	 stroke:black;
-	 stroke-width: 8 ;
 }
 @-webkit-keyframes breath01 {
 	to{
@@ -118,7 +160,30 @@ body{
 		opacity: 1;
 	}
 }
-
+#get_top:hover a svg{
+	opacity: 1;
+	animation-play-state: paused;
+}
+.laps path{
+	fill: transparent;
+	stroke:black;
+	stroke-width: 8 ;
+}
+#get_top span{
+	font-size: 0.74rem;
+	font-weight: bolder;
+	text-align: center;
+	width: 3.1rem;
+	height: 1.25rem;
+	line-height: 1.25rem;
+	/* background-color: #fab1a0; */
+	background-image: linear-gradient(125deg,#fab1a0,#ffeaa7);
+	position: absolute;
+	top: 10%;
+	left: -80%;
+	opacity: 0.85;
+	display: none;
+}
 #body_div{
 	width: 100vw;
 	height: auto;
@@ -127,11 +192,58 @@ body{
 .index_div{
 	position: relative;
 	background: #e5e5e5;
+	background-image: linear-gradient(#09073c,#090723,#000000);
 	width: 100vw;
 	height: 100vh;
-	color: #4298E7;
+	opacity: 1;
+}
+.index_center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.index_center p{
+	color: #838383;
+	text-align: center;
+	font-size: 8rem;
+	font-weight: bold;
+}
+.index_center p span{
+	font-size: 5.5rem;
+}
+.pl_down{
+	position: absolute;
+	bottom: 0.24rem;
+	left: 50%;
+	transform: translate(-50%,10%);
+	height: 0;
+}
+.pl_down svg path{
+	fill: #838383;
+	opacity: 0;
+	animation: breath01 3s linear infinite;
+	-webkit-animation:  breath01 3s linear infinite;
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+}
+.pl02{
+	bottom: 3rem;
 }
 .sec_div{
+	position: relative;
 	background-color: #e5e5e5;
 	height: 100vh;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+}
+.sec_div span{
+	font-size: 7rem;
+	font-weight: bold;
+	transition: .5s;
+}
+.sec_div span:hover{
+	transform: translateY(-50%);
 }
